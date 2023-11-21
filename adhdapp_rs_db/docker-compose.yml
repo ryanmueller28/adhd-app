@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16.0
+    volumes:
+      - ./db_data:/var/lib/postgresql/db/db_data
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=P3rr1n4yb4rr4
+      - POSTGRES_USER=db_user
+      - POSTGRES_DB=adhd_db
